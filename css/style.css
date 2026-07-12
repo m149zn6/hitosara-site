@@ -1,0 +1,1017 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+    background:#0d0d0d;
+
+    color:#ffffff;
+
+    line-height:1.9;
+}
+
+/* ==========================
+HEADER
+========================== */
+
+#header{
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    left:0;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(10px);
+
+    z-index:999;
+
+}
+
+#headerWrap{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo a{
+
+    color:#d8b46a;
+
+    text-decoration:none;
+
+    font-size:38px;
+
+    letter-spacing:5px;
+
+    font-weight:bold;
+
+}
+
+#mainnav ul{
+
+    display:flex;
+
+    list-style:none;
+
+}
+
+#mainnav li{
+
+    margin-left:40px;
+
+}
+
+#mainnav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+#mainnav a:hover{
+
+    color:#d8b46a;
+
+}
+
+/* ==========================
+MAIN VISUAL
+========================== */
+
+#mainImg{
+
+    position:relative;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+#mainImg img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.hero{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:90%;
+
+    max-width:900px;
+
+    text-align:center;
+
+}
+
+.hero .mini{
+
+    color:#d8b46a;
+
+    letter-spacing:6px;
+
+    margin-bottom:20px;
+
+}
+
+.hero h2{
+
+    font-size:90px;
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+.hero .sub{
+
+    font-size:30px;
+
+    color:#d8b46a;
+
+    margin-bottom:30px;
+
+}
+
+.hero .text{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:2;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:50px;
+
+    padding:18px 60px;
+
+    border:1px solid #d8b46a;
+
+    color:#d8b46a;
+
+    text-decoration:none;
+
+    transition:.4s;
+
+}
+
+.btn:hover{
+
+    background:#d8b46a;
+
+    color:black;
+
+}
+/* ==========================
+SECTION 共通
+========================== */
+
+section{
+
+    padding:120px 0;
+
+}
+
+.inner{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.innerS{
+
+    width:85%;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    color:#d8b46a;
+
+    margin-bottom:25px;
+
+    letter-spacing:3px;
+
+}
+
+section h3{
+
+    text-align:center;
+
+    font-size:32px;
+
+    margin-bottom:30px;
+
+    font-weight:normal;
+
+}
+
+section p{
+
+    text-align:center;
+
+    line-height:2.2;
+
+    color:#ddd;
+
+}
+
+.lead{
+
+    max-width:800px;
+
+    margin:0 auto 70px;
+
+}
+
+/* ==========================
+CONCEPT
+========================== */
+
+#sec01{
+
+    background:#111;
+
+}
+
+#sec01 h3{
+
+    color:white;
+
+}
+
+#sec01 p{
+
+    max-width:750px;
+
+    margin:auto;
+
+}
+
+/* ==========================
+NIGHT
+========================== */
+
+#sec02{
+
+    background:#181818;
+
+}
+
+/* カードを横並び */
+
+.cardArea{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
+
+    margin-top:70px;
+
+    flex-wrap:wrap;
+
+}
+
+.card{
+
+    width:330px;
+
+    background:#202020;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.card h4{
+
+    color:#d8b46a;
+
+    text-align:center;
+
+    margin-top:25px;
+
+    letter-spacing:2px;
+
+}
+
+.card h3{
+
+    font-size:24px;
+
+    margin:18px 0;
+
+}
+
+.card p{
+
+    padding:0 25px 35px;
+
+    text-align:center;
+
+}
+/* ==========================
+HOW IT WORKS
+========================== */
+
+#sec03{
+
+    background:#101010;
+
+}
+
+.timeline{
+
+    max-width:900px;
+
+    margin:70px auto;
+
+}
+
+.step{
+
+    background:#1b1b1b;
+
+    border-left:5px solid #d8b46a;
+
+    padding:35px;
+
+    margin-bottom:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+    transition:.3s;
+
+}
+
+.step:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.number{
+
+    width:60px;
+
+    height:60px;
+
+    background:#d8b46a;
+
+    color:#111;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    margin:0 auto 20px;
+
+}
+
+.step h3{
+
+    text-align:center;
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+    font-size:28px;
+
+}
+
+.step p{
+
+    text-align:center;
+
+    color:#ddd;
+
+    line-height:2;
+
+}
+
+/* ==========================
+Talk Plate
+========================== */
+
+.plateArea{
+
+    margin-top:100px;
+
+}
+
+.plateArea h3{
+
+    text-align:center;
+
+    color:#d8b46a;
+
+    font-size:38px;
+
+    margin-bottom:50px;
+
+}
+
+.plates{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
+
+    flex-wrap:wrap;
+
+}
+
+.plate{
+
+    width:280px;
+
+    border-radius:50%;
+
+    aspect-ratio:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    transition:.3s;
+
+}
+
+.plate:hover{
+
+    transform:scale(1.05);
+
+}
+
+.white{
+
+    background:#f6f6f6;
+
+    color:#222;
+
+}
+
+.red{
+
+    background:#a8001f;
+
+    color:white;
+
+}
+
+.gold{
+
+    background:linear-gradient(135deg,#c9a13b,#f6df8b);
+
+    color:#222;
+
+}
+
+.plate h4{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.plate p{
+
+    line-height:2;
+
+}
+/* ==========================
+DAY SPACE
+========================== */
+
+#sec04{
+
+    background:#181818;
+
+}
+
+#sec04 .card{
+
+    background:#252525;
+
+}
+
+#sec04 .card h3{
+
+    color:#d8b46a;
+
+}
+
+/* ==========================
+CONTACT
+========================== */
+
+#sec05{
+
+    background:#111;
+
+}
+
+.contactBox{
+
+    margin-top:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+.contactBox div{
+
+    width:300px;
+
+    background:#1d1d1d;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.contactBox div:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.contactBox h4{
+
+    color:#d8b46a;
+
+    font-size:26px;
+
+    margin-bottom:15px;
+
+}
+
+.contactBox p{
+
+    color:#ddd;
+
+}
+
+/* ==========================
+FOOTER
+========================== */
+
+#footer{
+
+    background:#000;
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#888;
+
+    font-size:14px;
+
+}
+
+/* ==========================
+レスポンシブ
+========================== */
+
+@media screen and (max-width:900px){
+
+#headerWrap{
+
+    flex-direction:column;
+
+    height:auto;
+
+    padding:20px 0;
+
+}
+
+#mainnav ul{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+#mainnav li{
+
+    margin:15px 0;
+
+}
+
+.hero h2{
+
+    font-size:52px;
+
+}
+
+.hero .sub{
+
+    font-size:22px;
+
+}
+
+.hero .text{
+
+    font-size:16px;
+
+}
+
+.card{
+
+    width:100%;
+
+}
+
+.plate{
+
+    width:220px;
+
+}
+
+.step{
+
+    padding:25px;
+
+}
+
+section{
+
+    padding:80px 0;
+
+}
+
+}
+
+@media screen and (max-width:600px){
+
+.hero h2{
+
+    font-size:40px;
+
+}
+
+.hero .sub{
+
+    font-size:18px;
+
+}
+
+section h2{
+
+    font-size:30px;
+
+}
+
+section h3{
+
+    font-size:24px;
+
+}
+
+.logo a{
+
+    font-size:28px;
+
+}
+
+}
+/*=========================
+PLATE LANE
+=========================*/
+
+#plateLane{
+
+    padding:120px 0;
+
+    background:#080808;
+
+    overflow:hidden;
+
+}
+
+#plateLane h2{
+
+    text-align:center;
+
+    color:#d8b46a;
+
+    font-size:42px;
+
+}
+
+.laneText{
+
+    text-align:center;
+
+    margin:25px 0 60px;
+
+    color:#ddd;
+
+}
+
+.lane{
+
+    overflow:hidden;
+
+    width:100%;
+
+}
+
+.track{
+
+    display:flex;
+
+    width:max-content;
+
+    animation:plateMove 28s linear infinite;
+
+}
+
+.track:hover{
+
+    animation-play-state:paused;
+
+}
+
+.plate{
+
+    min-width:220px;
+
+    margin:0 18px;
+
+    padding:22px;
+
+    border-radius:100px;
+
+    background:white;
+
+    color:#222;
+
+    font-size:22px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.4);
+
+}
+
+.plate:hover{
+
+    transform:translateY(-12px) scale(1.05);
+
+    background:#d8b46a;
+
+    color:white;
+
+}
+
+@keyframes plateMove{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(-50%);
+
+}
+
+}
+.selected{
+
+    background:#d8b46a !important;
+
+    color:white !important;
+
+    transform:scale(1.08);
+
+}
+/*=====================
+MATCHING
+=====================*/
+
+#matchingResult{
+
+padding:120px 0;
+
+background:#101010;
+
+text-align:center;
+
+}
+
+#selectedArea{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+margin:50px auto;
+
+flex-wrap:wrap;
+
+min-height:80px;
+
+}
+
+.selectedPlate{
+
+background:#d8b46a;
+
+color:white;
+
+padding:18px 35px;
+
+border-radius:100px;
+
+font-size:20px;
+
+}
+
+.empty{
+
+color:#888;
+
+}
+
+#matchingBox{
+
+width:600px;
+
+max-width:90%;
+
+margin:auto;
+
+}
+
+.bar{
+
+height:18px;
+
+background:#333;
+
+border-radius:100px;
+
+overflow:hidden;
+
+margin:30px 0;
+
+}
+
+#barFill{
+
+height:100%;
+
+width:0;
+
+background:linear-gradient(90deg,#d8b46a,#ffe7a5);
+
+transition:1.2s;
+
+}
+
+#percent{
+
+font-size:40px;
+
+color:#d8b46a;
+
+font-weight:bold;
+
+}
