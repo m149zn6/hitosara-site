@@ -1,85 +1,58 @@
-const plates = document.querySelectorAll(".plate");
+window.addEventListener("DOMContentLoaded", () => {
 
-const area = document.getElementById("selectedArea");
+    // 船の流れる処理
+    const ships = document.querySelector(".ships");
 
-const bar = document.getElementById("barFill");
+    if (ships) {
 
-const percent = document.getElementById("percent");
+        const items = [...ships.children];
 
-let selected=[];
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            ships.appendChild(clone);
+        });
 
-plates.forEach((plate)=>{
 
-plate.addEventListener("click",()=>{
+        let position = 0;
+        const speed = 0.5;
 
-const text=plate.innerText;
 
-if(plate.classList.contains("selected")){
+        function moveShips() {
 
-plate.classList.remove("selected");
+            position += speed;
 
-selected=selected.filter(item=>item!==text);
+            ships.style.transform =
+                `translate3d(${-position}px, 0, 0)`;
 
-}else{
 
-if(selected.length>=3){
+            if (position >= ships.scrollWidth / 2) {
+                position = 0;
+            }
 
-alert("3枚までです🍣");
 
-return;
+            requestAnimationFrame(moveShips);
+        }
 
-}
 
-plate.classList.add("selected");
+        moveShips();
 
-selected.push(text);
+    }
 
-}
 
-update();
+    // ハンバーガーメニュー
+    const menuBtn = document.querySelector("#menuBtn");
+    const menu = document.querySelector("#menu");
 
-});
 
-});
+    if (menuBtn && menu) {
 
-function update(){
+        menuBtn.addEventListener("click", () => {
 
-area.innerHTML="";
+            menuBtn.classList.toggle("active");
+            menu.classList.toggle("open");
 
-if(selected.length==0){
+        });
 
-area.innerHTML="<p class='empty'>まだ選択されていません</p>";
-
-bar.style.width="0%";
-
-percent.innerHTML="0%";
-
-return;
-
-}
-
-selected.forEach(item=>{
-
-const div=document.createElement("div");
-
-div.className="selectedPlate";
-
-div.innerHTML=item;
-
-area.appendChild(div);
+    }
 
 });
-
-let match=selected.length*32;
-
-if(match>95){
-
-match=95;
-
-}
-
-bar.style.width=match+"%";
-
-percent.innerHTML=match+"%";
-
-}
