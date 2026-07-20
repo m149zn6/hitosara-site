@@ -424,6 +424,29 @@ PROFILE SHIP
     padding:40px 0;
 
 }
+.river{
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: grab;
+    scroll-behavior: smooth;
+
+    /* スクロールバーを消す */
+    scrollbar-width: none;
+}
+
+.river::-webkit-scrollbar{
+    display:none;
+}
+
+.river.dragging{
+    cursor: grabbing;
+}
+
+.ships{
+    display:flex;
+    gap:40px;
+    width:max-content;
+}
 
 
 .ships{
@@ -1008,4 +1031,26 @@ RESERVE BUTTON
 .menu.active {
     display: block;
 }
+.river{
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    cursor: grab;
+}
 
+.river::-webkit-scrollbar{
+    display:none;
+}
+
+.ships{
+    display:flex;
+    width:max-content;
+}
+.river{
+    touch-action: pan-y;
+    cursor: grab;
+}
+
+.river.dragging{
+    cursor: grabbing;
+}
